@@ -1,58 +1,58 @@
 # FSD Template
 
-🚀 Современный и масштабируемый шаблон на базе методологии **Feature-Sliced Design**.
+🚀 A modern and scalable boilerplate built on top of the **Feature-Sliced Design** architectural methodology.
 
 ---
 
-## 🛠 Стек технологий
+## 🛠 Tech Stack
 
 - **Core:** [React 19](https://reactjs.org)
 - **Type System:** [TypeScript](https://typescriptlang.org)
-- **State Management:** [Redux Toolkit](https://js.org)
-- **Build Tool:** [Vite](https://vitejs.dev)
-- **Linter:** [ESLint](https://eslint.org) (настроен под FSD)
+- **State Management:** [Redux Toolkit](https://redux-toolkit.js.org)
+- **Build Tool:** [Vite](https://vite.dev)
+- **Linter:** [ESLint](https://eslint.org) (pre-configured for FSD)
 
 ---
 
-## 🏗 Архитектура
+## 🏗 Architecture & Codebase Structure
 
-Проект организован по слоям **Feature-Sliced Design**:
+The project strictly follows the **Feature-Sliced Design** layers:
 
-- `app/` — глобальные провайдеры, стили и точка входа.
-- `pages/` — композиционные слои, собирающие страницы из виджетов.
-- `widgets/` — крупные блоки, соединяющие фичи и сущности.
-- `features/` — действия пользователя, приносящие бизнес-ценность.
-- `entities/` — бизнес-логика и модели данных (например, Counter).
-- `shared/` — переиспользуемые UI-компоненты, API-клиенты и хелперы.
+- `app/` — Global initializers, providers, styles, and the application entry point.
+- `pages/` — Composition layer assembling application screens from widgets.
+- `widgets/` — High-level structural components combining features and entities.
+- `features/` — User actions and interactions that bring distinct business value.
+- `entities/` — Business logic, domain models, and state handling (e.g., Counter).
+- `shared/` — Reusable UI components, API clients, utilities, and helper functions.
 
 ---
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### Установка шаблона
+### Clone the repository
 ```bash
 git clone https://github.com/mattuzik/vite-react-redux-fsd-template
 ```
 
-### Установка зависимостей
+### Install dependencies
 ```bash
 npm install
 ```
 
-### Запуск dev-сервера
+### Run the development server
 ```bash
 npm run dev
 ```
 
-### Сборка (production)
+### Production build
 ```bash
 npm run build
 ```
 
 ---
 
-## 📏 Правила проекта
+## 📏 Architecture & Coding Rules
 
-1.  **Соблюдай иерархию слоев:** Модуль может импортировать только то, что находится на слоях ниже.
-2.  **Public API:** Используй `index.ts` в каждой папке модуля для экспорта только необходимого функционала.
-3.  **Типизация:** Обязательное использование интерфейсов для всех стейтов и пропсов.
+1.  **Respect Layer Hierarchy:** A module can only import code from layers located strictly below it.
+2.  **Public API:** Always use `index.ts` at the root of each module to export only the required functionality.
+3.  **Strict Typing:** Explicit interfaces and types are mandatory for all application states, hooks, and component props.
