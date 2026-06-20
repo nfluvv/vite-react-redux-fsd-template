@@ -22,7 +22,6 @@ export default tseslint.config(
       },
     },
     rules: {
-      // Вот актуальные названия правил из этого плагина
       'conarti-fsd/layers-slices': 'error',
       'conarti-fsd/absolute-relative': 'error',
       'conarti-fsd/public-api': 'error',
